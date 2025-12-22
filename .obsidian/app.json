@@ -1,1 +1,6 @@
-{}
+{
+  "rightToLeft": false,
+  "strictLineBreaks": false,
+  "foldIndent": true,
+  "readableLineLength": false
+}
