@@ -1,6 +1,10 @@
 ## Nmap: 
 ---
 ```bash
+nmap -T4 -n -A > first_1000
+```
+
+```bash
 Starting Nmap 7.95 ( https://nmap.org ) at 2025-12-22 11:38 CET
 Nmap scan report for 10.65.166.243
 Host is up (0.11s latency).
