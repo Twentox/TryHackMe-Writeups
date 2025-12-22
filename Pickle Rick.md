@@ -51,12 +51,12 @@ gobuster dir -w /usr/share/SecLists/Discovery/Web-Content/DirBuster-2007_directo
 Wubbalubbadubdub
 ```
 - this could be the password for `R1ckRul3s`
-- after i found this, i searched for a login-page although `gobuster` didn't found one
-- i did another `gobuster` scan with a bigger wordlist and i found `login.php` 
-- i tested the creds and got logged in
+- after I found this, I searched for a login-page although `gobuster` didn't found one
+- I did another `gobuster` scan with a bigger wordlist and I found `login.php` 
+- I tested the creds and got logged in
 ![](assets/Pickle_Rick_2.png)
 - we see a Input-Form, where we can input `commands` 
-- before i tested the form, i once again inspected the source-code and found this: 
+- before I tested the form, I once again inspected the source-code and found this: 
 ```html
 <!-- Vm1wR1UxTnRWa2RUV0d4VFlrZFNjRlV3V2t0alJsWnlWbXQwVkUxV1duaFZNakExVkcxS1NHVkliRmhoTVhCb1ZsWmFWMVpWTVVWaGVqQT0== -->
 ```
@@ -95,11 +95,11 @@ base64 Sup3rS3cretPickl3Ingred.txt | base64 -d
 - it works and we get this output: `mr. meeseek hair`
 - so we got the first ingredient
 - now lets test if we can deploy a `PHP` Reverse-Shell 
-- first i execute a listener on my attacker-machine with `netcat`: 
+- first I execute a listener on my attacker-machine with `netcat`: 
 ```bash
 nc -lnvp 1234
 ```
-- then i went to https://www.invicti.com/learn/reverse-shell and copied the `PHP` reverse-shell one-liner and put that into the `form`
+- then I went to https://www.invicti.com/learn/reverse-shell and copied the `PHP` reverse-shell one-liner and put that into the `form`
 - like this: 
 ![](assets/Pickle_Rick_4.png)
 - after i executed it, i checked my Terminal for the `nc -lnvp 1234` if i got a reverse-shell and i indeed got one 
