@@ -23,7 +23,7 @@ Nmap done: 1 IP address (1 host up) scanned in 17.12 seconds
 - lets see what we can find on the web-server 
 ## Enumeration: 
 ---
-![[Pickle_Rick_1.png]]
+![[assets/Pickle_Rick_1.png]]
 - that's the first thing we see, when we open up the website 
 - when we inspect the source-code (press `Ctrl+U`), we can see this comment: 
 ```HTML
