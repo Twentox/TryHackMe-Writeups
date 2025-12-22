@@ -54,7 +54,7 @@ Wubbalubbadubdub
 - after i found this, i searched for a login-page although `gobuster` didn't found one
 - i did another `gobuster` scan with a bigger wordlist and i found `login.php` 
 - i tested the creds and got logged in
-![](Pickle_Rick_2.png)
+![](assets/Pickle_Rick_2.png)
 - we see a Input-Form, where we can input `commands` 
 - before i tested the form, i once again inspected the source-code and found this: 
 ```html
@@ -69,10 +69,10 @@ echo "Vm1wR1UxTnRWa2RUV0d4VFlrZFNjRlV3V2t0alJsWnlWbXQwVkUxV1duaFZNakExVkcxS1NHVk
 VmpGU1NtVkdTWGxTYkdScFUwWktjRlZyVmt0VE1WWnhVMjA1VG1KSGVIbFhhMXBoVlZaV1ZVMUVhejA=base64: invalid input
 ```
 - so we see that the output is another `base64` encoded String
-- i piped it again into `base64` and the output was again a `base64` encoded String 
-- i did this a couple times until the String `rabbit hole` popped up, so a dead end 
+- I piped it again into `base64` and the output was again a `base64` encoded String 
+- I did this a couple times until the String `rabbit hole` popped up, so a dead end 
 
-- after that i tested the `form`
+- after that I tested the `form`
 - when we type `ls` as the input, we see that the command was executed and the output was this: 
 ```bash 
 Sup3rS3cretPickl3Ingred.txt
