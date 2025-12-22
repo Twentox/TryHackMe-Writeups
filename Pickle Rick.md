@@ -86,7 +86,7 @@ robots.txt
 ```
 - lets try to `cat` the `Sup3rS3cretPickl3Ingred.txt` 
 
-![](Pickle_Rick_3.png)
+![](assets/Pickle_Rick_3.png)
 - that means that probably a blacklist is set, that block specific `commands`  
 - we can try to read the file with `base64`: 
 ```bash
@@ -101,7 +101,7 @@ nc -lnvp 1234
 ```
 - then i went to https://www.invicti.com/learn/reverse-shell and copied the `PHP` reverse-shell one-liner and put that into the `form`
 - like this: 
-![](Pickle_Rick_4.png)
+![](assets/Pickle_Rick_4.png)
 - after i executed it, i checked my Terminal for the `nc -lnvp 1234` if i got a reverse-shell and i indeed got one 
 - to get a little more stable shell i always to this on the target-machine: 
 ```bash
