@@ -54,7 +54,7 @@ Wubbalubbadubdub
 - after i found this, i searched for a login-page although `gobuster` didn't found one
 - i did another `gobuster` scan with a bigger wordlist and i found `login.php` 
 - i tested the creds and got logged in
-![[Pickle_Rick_2.png]]
+![](Pickle_Rick_2.png)
 - we see a Input-Form, where we can input `commands` 
 - before i tested the form, i once again inspected the source-code and found this: 
 ```html
@@ -86,7 +86,7 @@ robots.txt
 ```
 - lets try to `cat` the `Sup3rS3cretPickl3Ingred.txt` 
 
-![[Pickle_Rick_3.png]]-
+![](Pickle_Rick_3.png)
 - that means that probably a blacklist is set, that block specific `commands`  
 - we can try to read the file with `base64`: 
 ```bash
@@ -101,7 +101,7 @@ nc -lnvp 1234
 ```
 - then i went to https://www.invicti.com/learn/reverse-shell and copied the `PHP` reverse-shell one-liner and put that into the `form`
 - like this: 
-![[Pickle_Rick_4.png]]
+![](Pickle_Rick_4.png)
 - after i executed it, i checked my Terminal for the `nc -lnvp 1234` if i got a reverse-shell and i indeed got one 
 - to get a little more stable shell i always to this on the target-machine: 
 ```bash
