@@ -1,6 +1,6 @@
 ## IDOR Basics:
 ---
-- in the description of this room was mentioning that we can check out `IDOR` because its similar content 
+- in the description of this room was mentioned that we can check out `IDOR` because its similar content 
 - so I assume that we will find a `IDOR`-vulnerability in this room
 - `IDOR` stands for `Insecure Direct Object Reference` 
 - This type of vulnerability can occur when a web server uses user-owned data to retrieve objects
