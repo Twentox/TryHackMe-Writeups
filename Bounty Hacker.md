@@ -42,8 +42,8 @@ Service Info: OSs: Unix, Linux; CPE: cpe:/o:linux:linux_kernel
 ```bash
 ftp 10.64.161.189
 ```
-- when `anonymous` login is allowed you use "anonymous" as username an leave the password `blank` (press `ENTER` when asked for a password)
-- when we list out the files that are in the directory we are currently in we these two files: 
+- when `anonymous` login is allowed you can use "anonymous" as username an leave the password `blank` (press `ENTER` when asked for a password)
+- when we list out the files that are in the directory, we are currently in, we see these two files: 
 ```bash
 ftp> ls -ls
 200 PORT command successful. Consider using PASV.
@@ -128,7 +128,7 @@ THM{<Redacted>}
 ---
 - lets run `sudo -l` to see if we can run anything with `sudo`
 ```bash
-Matching Defaults entries for lin on ip-10-64-161-189:
+Matching Defaults entries for <Redacted> on ip-10-64-161-189:
     env_reset, mail_badpass,
     secure_path=/usr/local/sbin\:/usr/local/bin\:/usr/sbin\:/usr/bin\:/sbin\:/bin\:/snap/bin
 
