@@ -25,10 +25,10 @@ Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
 
 ## further Enumeration: 
 ---
-![](assets/Library_1.png)
+![](Library/images/Library_1.png)
 - this is the first thing we see, when we open a the website 
 - when we scroll down we can see `comments`: 
-![](assets/Library_2.png)
+![](Library/images/Library_2.png)
 - there are 3 comments from different `user`, because `root` and `www-data` well known usernames on Linux-machines we can assume that `anonymous` is also a `user` 
 - lets use `Gobuster` to find directory's or files that are stored on this website
 ### Gobuster: 
@@ -48,7 +48,7 @@ gobuster dir -w /usr/share/SecLists/Discovery/Web-Content/common.txt -u http://1
 ```
 
 - lets look into `robots.txt`: 
-![](assets/Library_3.png)
+![](Library/images/Library_3.png)
 - `rockyou` refers to the well known `wordlist` that is used with for example `hydra` to `brute-force` passwords or usernames 
 - we could try to `brute-force` the password of `anonymous` in `SSH` 
 ## Hydra: 
@@ -122,7 +122,7 @@ os.system("/bin/bash")
 sudo -u root /usr/bin/python3 /home/meliodas/bak.py
 ```
 
-![](assets/Library_4.png)
+![](Library/images/Library_4.png)
 - now we can read the `root.txt`: 
 ```bash
 e<Redacted>7

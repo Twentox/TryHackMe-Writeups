@@ -32,7 +32,7 @@ http://<Machine-IP-Address>
 
 - So let’s do that:
 
-![](assets/Neighbour_1.png)
+![](Neighbour/images/Neighbour_1.png)
 
 - We are presented with a login form and a message suggesting that we should check the source code if we do not have an account.
 - Let’s inspect the source code.
@@ -44,7 +44,7 @@ http://<Machine-IP-Address>
 
 - Based on this comment, we log in using the credentials `guest:guest`.
 
-![](assets/Neighbour_2.png)
+![](Neighbour/images/Neighbour_2.png)
 
 - After logging in, we see a welcome message and a logout button.
 - However, instead of interacting with the page, let’s take a closer look at the `URL`:
@@ -65,4 +65,4 @@ http://10.64.181.59/profile.php?user=guest
 - So let’s try replacing the `user` parameter value from `guest` to `admin`.
 - After doing this, we receive the following page content:
 
-![](assets/Neighbour_3.png)
+![](Neighbour/images/Neighbour_3.png)

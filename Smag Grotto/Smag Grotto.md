@@ -39,7 +39,7 @@ gobuster dir -w /usr/share/SecLists/Discovery/Web-Content/common.txt -u http://1
 ---
 - lets check out the `/mail` 
 - their we can see different emails from `Smag` users 
-![](assets/Smag_Grotto_1.png)
+![](Smag Grotto/images/Smag_Grotto_1.png)
 - in the email on top we see a `.pcap` file, which stands for `Packet Capture` 
 - lets download it and look at it in `Wireshark` 
 - we can open the file with `Wireshark` with this command: 
@@ -47,12 +47,12 @@ gobuster dir -w /usr/share/SecLists/Discovery/Web-Content/common.txt -u http://1
 wireshark dHJhY2Uy.pcap
 ```
 
-![](assets/Smag_Grotto_2.png)
+![](Smag%20Grotto/images/Smag_Grotto_2.png)
 - here we can see the packets that got captured 
 - we first 3 packets are the `TCP-Handshake` and the fourth packet is a `HTTP-Packet` that sends some data to `/login.php` 
 - lets check this `HTTP-Packet` out 
 
-![](assets/Smag_Grotto_4.png)
+![](Smag%20Grotto/images/Smag_Grotto_4.png)
 - in the `HTML Form URL Encoded` we can see a `username` and a `password` 
 - we can also see that the request was send to the Host: `development.smag.thm` 
 - so lets add that `Domain` to our `hosts` file in `/etc`: 
@@ -62,7 +62,7 @@ wireshark dHJhY2Uy.pcap
 - now we can visit that site in our Browser
 - lets try to log on to the `helpdesk` account with the `password`  
 - after we logged in we get send to `admin.php` and we see this: 
-![](assets/Smag_Grotto_5.png)
+![](Smag%20Grotto/images/Smag_Grotto_5.png)
 - this seems like a `Web-shell`, lets try to get a reverse-shell
 - first I tried to execute basic commands like `ls`, `pwd` etc. but I didn't got any output on the website 
 - so my guess was that the commands where executing on the machine and that the output was simply ignored 

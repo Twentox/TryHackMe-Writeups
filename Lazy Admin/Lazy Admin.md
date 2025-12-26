@@ -22,7 +22,7 @@ Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
 - lets look at the website
 ## further Enumeration: 
 ---
-![](assets/Lazy_Admin_1.png)
+![](Lazy%20Admin/images/Lazy_Admin_1.png)
 - when we load up the page we see the `apache` default page, so nothing interesting 
 - I also looked into the `source-code` (with Ctrl+U), but also there was nothing useful 
 - lets use `Gobuster` to find other files or directory's that are on this web-server
@@ -41,7 +41,7 @@ gobuster dir -w /usr/share/SecLists/Discovery/Web-Content/common.txt -u http://1
 /server-status        (Status: 403) [Size: 277]
 ```
 - lets look into `/content`: 
-![](assets/Lazy_Admin_2.png)
+![](Lazy%20Admin/images/Lazy_Admin_2.png)
 - lets enumerate `/content` further with another `Gobuster` scan 
 
 ```bash
@@ -76,7 +76,7 @@ cat mysql_bakup_20191129023059-1.5.1.sql
 - lets use these creds to login at `/as` 
 ## Upload a reverse-shell: 
 ---
-![](assets/Lazy_Admin_3.png)
+![](Lazy%20Admin/images/Lazy_Admin_3.png)
 - we got logged in 
 - lets use `Searsploit` with `SweetRice` and the current version `1.5.1` to see if there is a upload-vulnerability:
 ```bash 
@@ -103,7 +103,7 @@ searchsploit -m 40716.py
 nc -lnvp 1234
 ```
 
-![](assets/Lazy_Admin_4.png)
+![](Lazy%20Admin/images/Lazy_Admin_4.png)
 - we got a `reverse-shell`, I used the `PHP` reverse-shell from `pentestmonkey`
 - i had to rename it to `.php5`, because with the `.php` extension it didn't work 
 - to stabilize the shell a little bit I always to this: 
@@ -155,7 +155,7 @@ User www-data may run the following commands on THM-Chal:
 sudo -u root /usr/bin/perl /home/itguy/backup.pl
 ```
 
-![](assets/Lazy_Admin_5.png) 
+![](Lazy%20Admin/images/Lazy_Admin_5.png) 
 - so now we have a `root-shell` and can read the `root.txt`: 
 ```bash 
 THM{<Redacted>}

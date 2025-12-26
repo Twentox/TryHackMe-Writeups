@@ -137,7 +137,7 @@ User lin may run the following commands on ip-10-64-161-189:
 ```
 - so we can run `tar` with `sudo` as `root` 
 - lets look up `tar` in the `GTFOBins` to see if can use this command to become `root`:
-![](assets/Bounty_Hacker_1.png)
+![](Bounty%20Hacker/images/Bounty_Hacker_1.png)
 - lets try `(a)` to get a `root-shell` 
 - the command for this would look like this: 
 ```bash 
