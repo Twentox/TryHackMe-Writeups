@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Bounty Hacker/Bounty Hacker.md",
+                "file": "Brooklyn Nine Nine/Brooklyn Nine Nine.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Bounty Hacker"
+              "title": "Brooklyn Nine Nine"
             }
           }
         ]
@@ -78,7 +78,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "6f615df04001ddf7",
@@ -184,8 +185,21 @@
       "bases:Create new base": false
     }
   },
-  "active": "39ad6104b0b6fa92",
+  "active": "e92c0a2db74220ac",
   "lastOpenFiles": [
+    "Brooklyn Nine Nine/images/Brooklyn_Nine_Nine_2.png",
+    "Brooklyn Nine Nine/images/Brooklyn_Nine_Nine_1.png",
+    "Bounty Hacker/Bounty Hacker.md",
+    "Brooklyn Nine Nine/Brooklyn Nine Nine.md",
+    "Brooklyn Nine Nine/images",
+    "Brooklyn Nine Nine",
+    "Gaming Server/Gaming Server.md",
+    "Gaming Server/images.md",
+    "Gaming Server/images/Gaming_Server_1.png",
+    "gobuster/first_enum",
+    "gobuster",
+    "Gaming Server/images",
+    "Gaming Server",
     "Corridor/Corridor.md",
     "Dreaming/Dreaming.md",
     "Lazy Admin/Lazy Admin.md",
@@ -198,14 +212,7 @@
     "Dreaming/images",
     "Dreaming",
     "Lazy Admin/images",
-    "Corridor/images",
-    "Corridor",
-    "Lazy Admin",
-    "Library/images",
     "Library/Untitled.md",
-    "Bounty Hacker/Bounty Hacker.md",
-    "Library",
-    "Neighbour/images",
     "Library/images/Library_4.png",
     "Library/images/Library_3.png",
     "Library/images/Library_2.png",
@@ -214,8 +221,6 @@
     "Startup/images/Startup_8.png",
     "Startup/images/Startup_7.png",
     "Startup/images/Startup_6.png",
-    "Startup/images/Startup_5.png",
-    "Lazy Admin/images/Lazy_Admin_4.png",
     "Bugged.md"
   ]
 }
