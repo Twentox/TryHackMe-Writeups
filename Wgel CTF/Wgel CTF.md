@@ -22,7 +22,7 @@ Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
 - lets look at the website
 ## further Enumeration: 
 ---
-![](Wgel%20CTF/images/Wgel_CTF_1.png)
+![](images/Wgel_CTF_1.png)
 - so its just the default `Apache` site 
 - in the `source-code` i saw this comment:
 ```bash
@@ -46,7 +46,7 @@ gobuster dir -w /usr/share/SecLists/Discovery/Web-Content/common.txt -u http://1
 ```
 - lets look into `/sitemap` 
 
-![](Wgel%20CTF/images/Wgel_CTF_2.png)
+![](images/Wgel_CTF_2.png)
 - lets scan `/sitemap` with `Gobuster` again 
 
 ```bash
@@ -84,7 +84,7 @@ User jessie may run the following commands on CorpOne:
 - so we can run `wget` with `root-privileges` 
 
 - i first tried to use the this from `GTFOBins`: 
-![](Wgel%20CTF/images/Wgel_CTF_3.png)
+![](images/Wgel_CTF_3.png)
 - this didn't work because `wget` had not option `--use-askpass` 
 - then I in the internet for an other option and found this: [wget-privesc](https://morgan-bin-bash.gitbook.io/linux-privilege-escalation/sudo-wget-privilege-escalation)
 

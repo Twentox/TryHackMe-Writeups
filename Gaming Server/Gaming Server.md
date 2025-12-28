@@ -23,7 +23,7 @@ Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
 - lets open up the website 
 ## further Enumeration:
 ---
-![](Gaming%20Server/images/Gaming_Server_1.png)
+![](images/Gaming_Server_1.png)
 - lets check out the `source-code` (press Ctrl+U), because the content of the page is mostly `Lorem ipsum` 
 - at the end of the `HTML`-file we see this comment: 
 ```bash

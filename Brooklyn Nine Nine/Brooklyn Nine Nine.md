@@ -66,7 +66,7 @@ Jake please change your password. It is too weak and holt will be mad if someone
 
 ## further Enumeration: 
 ---
-![](Brooklyn%20Nine%20Nine/images/Brooklyn_Nine_Nine_1.png)
+![](images/Brooklyn_Nine_Nine_1.png)
 - on the website, we just see a picture from the series 
 - in the `source-code` is a comment: 
 ```
@@ -112,7 +112,7 @@ User jake may run the following commands on brookly_nine_nine:
     (ALL) NOPASSWD: /usr/bin/less
 ```
 - so we can run `less` as root, lets got to `GTFOBins` to see if `less` can be used to read files or to get a `root-shell` 
-![](Brooklyn%20Nine%20Nine/images/Brooklyn_Nine_Nine_2.png)
+![](images/Brooklyn_Nine_Nine_2.png)
 
 - but first I wanted to check out the `/var/www/html`, because the comment about `steganography` was stuck in my head and i wanted to see if their meant an other picture 
 ```bash
