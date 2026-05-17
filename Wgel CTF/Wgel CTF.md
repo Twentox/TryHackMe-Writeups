@@ -25,7 +25,7 @@ Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
 ![](images/Wgel_CTF_1.png)
 - so its just the default `Apache` site 
 - in the `source-code` i saw this comment:
-```bash
+```html
 <!-- Jessie don't forget to udate the webiste -->
 ```
 - so we found the first potential `username` 
