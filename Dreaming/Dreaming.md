@@ -19,7 +19,7 @@ PORT   STATE SERVICE VERSION
 Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
 ```
 
-- lets open up the web server
+- lets open up the website 
 # Web Server: 
 ---
 
