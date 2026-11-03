@@ -1,3 +1,5 @@
+# Juicy Details
+
 - after downloading the ZIP file and extracting its contents, we can see three different files:
 ```bash
 drwxr-xr-x 2 erik erik   4096 Nov  3 17:59 .
