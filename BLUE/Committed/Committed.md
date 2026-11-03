@@ -1,7 +1,7 @@
 # Committed
 
 - when we start the machine we can see a `ZIP file` that should contain the `repository`
-![[Committed_1.png|704]]
+![Committed_1|697](images/Committed_1.png)
 
 - so we unzip it with: 
 ```bash
@@ -51,7 +51,7 @@ def create_tables():
 
 - we can see that nothing is stored in the `user` and `password` variables, so not even a variabel from an `.env` file 
 - after I found nothing in the commits on the `master`-branch, I thought that maybe there ist another `branch`:   
-![[Committed_3.png]]
+![Committed_3](images/Committed_3.png)
 
 - lets switch to the `branch`: 
 ```bash
@@ -59,7 +59,7 @@ git switch dbint
 ```
 
 - lets look at the `commits`: 
-![[Committed_4.png]]
+![Committed_4](images/Committed_4.png)
 
 - one `commit` stands out with the message `Oops`, lets check out the commit before this: 
 ```bash
